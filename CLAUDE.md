@@ -40,7 +40,42 @@ git push origin <branch>
 
 ## Development
 
-（技術スタックが決まったらここに追記する）
+### 技術スタック
+
+| 用途 | ライブラリ / ツール |
+|---|---|
+| UI フレームワーク | React 18 |
+| ビルドツール | Vite 5 |
+| スタイリング | CSS Modules |
+| 言語 | JavaScript (JSX) |
+| パッケージマネージャ | npm |
+
+### ローカル起動
+
+```
+npm run dev
+```
+
+→ http://localhost:5173 でアクセス可能。
+
+### ビルド
+
+```
+npm run build
+```
+
+### コンポーネント命名規約
+
+- ファイル名・コンポーネント名はともに **PascalCase** (`TaskBoard.jsx`)
+- スタイルは同名の CSS Modules ファイルを併置 (`TaskBoard.module.css`)
+- 1 ファイル 1 コンポーネントを基本とする
+- `App.jsx` はルートコンポーネントのみ。ロジックは各コンポーネントに分離する
+
+## Deploy
+
+- **GitHub Pages:** https://gaga1100.github.io/task_board/
+- `main` ブランチへの push で GitHub Actions が自動ビルド＆デプロイ
+- ワークフロー定義: `.github/workflows/deploy.yml`
 
 ## Notes
 
